@@ -1,0 +1,147 @@
+:root {
+    --clr-dark: hsl(244, 38%, 16%); 
+    --clr-light: hsl(255, 100%, 100%);
+    --clr-accent: hsl(277, 64%, 61%);
+    --clr-background: hsl(233, 47%, 7%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light: hsla(0, 0%, 100%, 0.6);
+    --clr-grey: hsla(0, 0%, 100%, 0.75);
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--clr-light);
+    background-color: var(--clr-background);
+    font-family: 'Inter', sans-serif;
+}
+
+h3 {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 144rem;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 37.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    overflow:hidden;
+    border-radius: 1rem;
+    background-color: var(--clr-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(170, 92, 219, .6);
+        }
+
+        img {
+            
+        }
+    }
+
+    &__body {
+        // max-width: 22rem;
+        padding: 2.4rem;
+        color: var(--clr-white);
+    }
+
+    &__title {
+        
+        margin-bottom: 1.5rem;
+        font-size: 1.5em;
+
+        .accent {
+            color: var(--clr-accent);
+        }
+    }
+
+    &__desc {
+        margin-bottom: 3rem;
+        color: var(--clr-grey);
+    }
+
+    &__stat {
+        &__inner {
+            margin-bottom: 2.4rem;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--clr-white);
+        }
+
+        &-label {
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--clr-grey);
+        }
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 2.4rem;
+}
+
+@media (min-width: 800px)
+{
+    .card {
+        max-width: 144rem;
+        flex-direction: row-reverse;
+
+        &__image {
+            min-width: 50%;
+        }
+
+        &__body {
+            min-width: 50%;
+        }
+    }
+
+}
