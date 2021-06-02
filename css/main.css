@@ -200,7 +200,6 @@ a:hover {
     font-size: 2em;
   }
   .card__desc {
-    max-width: 90%;
     margin: 0;
     padding: 3rem 0;
   }
@@ -225,7 +224,11 @@ a:hover {
 
 @media (min-width: 1140px) {
   .card__desc {
+    max-width: 90%;
     margin-top: -5rem;
+  }
+  .card__stat {
+    max-width: 84%;
   }
 }
 /*# sourceMappingURL=main.css.map */

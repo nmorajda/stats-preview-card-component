@@ -173,7 +173,6 @@ a {
         }
 
         &__desc {
-            max-width: 90%;
             margin: 0;
             padding: 3rem 0;
         }
@@ -197,7 +196,12 @@ a {
 @media (min-width: 1140px) {
     .card {
         &__desc {
+            max-width: 90%;
             margin-top: -5rem;
+        }
+
+        &__stat {
+            max-width: 84%;
         }
     }
 
